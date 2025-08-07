@@ -1,0 +1,40 @@
+### Crear reporte
+POST http://localhost:8000/reportes
+Content-Type: application/json
+
+{
+  "tip_id": 1,
+  "rep_descripcion": "Contenedor de basura rebosado",
+  "rep_url_imagen": "https://ejemplo.com/basura.jpg",
+  "rep_nivel_incidencia": 3,
+  "usu_id": 1
+}
+
+###
+
+### Obtener todos los reportes
+GET http://localhost:8000/reportes
+
+###
+
+### Obtener reporte por ID
+GET http://localhost:8000/reportes/1
+
+###
+
+### Actualizar reporte
+PUT http://localhost:8000/reportes/1
+Content-Type: application/json
+
+{
+  "tip_id": 1,
+  "rep_descripcion": "Basura en esquina principal",
+  "rep_url_imagen": "https://ejemplo.com/basura-editada.jpg",
+  "rep_nivel_incidencia": 4,
+  "usu_id": 1
+}
+
+###
+
+### Eliminar reporte
+DELETE http://localhost:8000/reportes/1

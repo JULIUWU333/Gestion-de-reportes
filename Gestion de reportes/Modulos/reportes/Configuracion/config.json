@@ -1,0 +1,18 @@
+{
+  "db_engine": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "user": "pruebas",
+  "password": "12345",
+  "database": "green_node",
+
+  "api_base": "http://localhost:8000",
+  "endpoints": {
+    "create": "/reportes",
+    "read_all": "/reportes",
+    "read_one": "/reportes/{id}",
+    "update": "/reportes/{id}",
+    "delete": "/reportes/{id}"
+  }
+}
+

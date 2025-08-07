@@ -1,0 +1,7 @@
+acceso_datos
+configuracion
+fastapi
+psycopg2
+pymysql
+requests
+uvicorn

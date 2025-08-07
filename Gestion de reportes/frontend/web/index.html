@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Reportes</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="mostrarSeccion('crear')">Crear Reporte</a>
+        <a href="#" onclick="mostrarSeccion('lista')">Lista de Reportes</a>
+        <a href="#" onclick="mostrarSeccion('acciones')">Acciones</a>
+    </div>
+
+    <div id="crear" class="seccion">
+        <h2>Crear Reporte</h2>
+        <form id="formReporte">
+            <input type="number" id="tip_id" placeholder="ID Tipo Reporte" />
+            <textarea id="rep_descripcion" placeholder="Descripción"></textarea>
+            <input type="text" id="rep_url_imagen" placeholder="URL Imagen" />
+            <input type="number" id="rep_nivel_incidencia" placeholder="Nivel Incidencia (1-5)" />
+            <input type="number" id="usu_id" placeholder="ID Usuario" />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <div id="lista" class="seccion">
+        <h2>Lista de Reportes</h2>
+        <ul id="listaReportes"></ul>
+    </div>
+
+    <div id="acciones" class="seccion">
+        <h2>Buscar / Actualizar / Eliminar</h2>
+        <input type="number" id="idBuscar" placeholder="ID del reporte" />
+        <button onclick="buscarReporte()">Buscar</button>
+
+        <input type="number" id="tip_idAccion" placeholder="ID Tipo Reporte" />
+        <textarea id="rep_descripcionAccion" placeholder="Descripción"></textarea>
+        <input type="text" id="rep_url_imagenAccion" placeholder="URL Imagen" />
+        <input type="number" id="rep_nivel_incidenciaAccion" placeholder="Nivel Incidencia" />
+        <input type="number" id="usu_idAccion" placeholder="ID Usuario" />
+
+        <button onclick="actualizarReporte()">Actualizar</button>
+        <button onclick="eliminarReporte()">Eliminar</button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
